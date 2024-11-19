@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Türk Olmanın Güzelliği</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <video id="patriotic-video" controls autoplay>
+    <source src="{{ url_for('static', filename=video_file) }}" type="video/mp4">
+    Tarayıcınız video oynatımını desteklemiyor.
+  </video>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var video = document.getElementById("patriotic-video");
+      video.play();
+    });
+  </script>
+</body>
+</html>
